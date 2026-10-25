@@ -4,7 +4,7 @@ A simplified **AXI4-Lite slave that reads and writes a small RAM**, built around
 
 Simulated and verified in **Xilinx Vivado**.
 
-> This is the FSM-based version of my AXI4-Lite RAM wrapper. The other version uses handshake flags and supports byte-strobe writes: [axi-lite-ram-wrapper-verilog](https://github.com/YOUR-USERNAME/axi-lite-ram-wrapper-verilog).
+> This is the FSM-based version of my AXI4-Lite RAM wrapper. The other version uses handshake flags and supports byte-strobe writes: [AXI-lite-RAM-wrapper-verilog](https://github.com/Sumit-VLSI/AXI-lite-RAM-wrapper-verilog).
 
 ---
 
@@ -175,7 +175,7 @@ PASS       : Read 0x00000000 (Expected 0x00000000)
 
 This version trades features for simplicity. Known limitations:
 
-- **No `WSTRB`:** only full 32-bit word writes. The [handshake-flag version](https://github.com/YOUR-USERNAME/axi-lite-ram-wrapper-verilog) supports byte strobes.
+- **No `WSTRB`:** only full 32-bit word writes. The [handshake-flag version](https://github.com/Sumit-VLSI/AXI-lite-RAM-wrapper-verilog) supports byte strobes.
 - **One transaction at a time**, and the address phase must complete before data is accepted.
 - **Single-port RAM:** reads and writes share one address bus, so a read and a write must not overlap.
 - The address is used as a **word index** (4 bits select one of 16 words), not a byte address.
